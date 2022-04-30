@@ -20,4 +20,5 @@ use App\http\controllers\UserStudentcontroller;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/product', [projectcontroller::class,'product']);
+Route::get('/userInformation', [userStudentController::class, 'userInformation']);
+Route::post('/userRegistration',[userStudentController::class, 'userRegistrationSubmit']);
